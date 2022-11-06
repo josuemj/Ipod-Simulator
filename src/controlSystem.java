@@ -43,4 +43,16 @@ public class controlSystem {
         return cancionesOB;
     }
 
+    /**
+     * Method returns an array just with the song name so GUI can take them to set the ComboBox
+     * @param listaCanciones
+     * @return String[] allSongsTittles
+     */
+    public static String[] getTitles(ArrayList<Cancion> listaCanciones){
+         String[] allSongsTittles = new String[listaCanciones.size()];
+         for(int i = 0;i<listaCanciones.size();i++){allSongsTittles[i] = listaCanciones.get(i).getTitle();}
+         return allSongsTittles;
+    }
+
+
 }

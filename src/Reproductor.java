@@ -8,10 +8,21 @@ public class Reproductor extends JFrame {
 
     public Reproductor(){
 
+        //Setting all songs into the comboBox
+        ArrayList<Cancion> cancionesOBG = controlSystem.getData();
+        String[] allSongs = controlSystem.getTitles(cancionesOBG);
+        for(int a = 0;a<allSongs.length;a++){
+            allSongsComboBox.addItem(allSongs[a]);
+        }
+
+        //Interface options
         setContentPane(reproductor);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(200,200);
         musicPanel.setVisible(false);
+
+
+        //Showing music panel afters its turned on
         onButton.addActionListener(new ActionListener() {
             /**
              * @param e the event to be processed
@@ -21,6 +32,8 @@ public class Reproductor extends JFrame {
                 musicPanel.setVisible(true);
             }
         });
+
+        //Hides the music panel so it's off then.
         offButton.addActionListener(new ActionListener() {
             /**
              * @param e the event to be processed
@@ -36,17 +49,6 @@ public class Reproductor extends JFrame {
     public static void main(String[] args) {
         JFrame reproductor = new Reproductor();
         reproductor.setVisible(true);
-        ArrayList<Cancion> cancionesOBG = controlSystem.getData();
-        //Control point
-        for(int i = 0;i<cancionesOBG.size();i++){
-            System.out.println("\n========================");
-            System.out.println("ID SONG: "+cancionesOBG.get(i).getID());
-            System.out.println("TITLE: "+cancionesOBG.get(i).getTitle());
-            System.out.println("ARTISTA: "+cancionesOBG.get(i).getArtist());
-            System.out.println("ALBUM: "+cancionesOBG.get(i).getAlbum());
-            System.out.println("DURATION: "+cancionesOBG.get(i).getDuration());
-            System.out.println("========================");
-        }
     }
 
 
@@ -54,4 +56,11 @@ public class Reproductor extends JFrame {
     private JButton offButton;
     private JButton onButton;
     private JPanel musicPanel;
+    private JButton previousButton;
+    private JButton nextButton;
+    private JButton playButton;
+    private JComboBox allSongsComboBox;
+    private JButton addCurrentSongToButton;
+    private JComboBox favoriteSogsComboBox;
+    private JButton playThisSongButton;
 }

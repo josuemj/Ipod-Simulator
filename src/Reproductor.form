@@ -18,7 +18,7 @@
         <properties>
           <background color="-1"/>
           <foreground color="-1"/>
-          <icon value="playButton.png"/>
+          <icon value="TurnOnButton.png"/>
           <text value=""/>
         </properties>
       </component>
@@ -47,14 +47,107 @@
           <text value=""/>
         </properties>
       </component>
-      <grid id="4a83d" binding="musicPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="4a83d" binding="musicPanel" layout-manager="GridLayoutManager" row-count="8" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-1"/>
+        </properties>
         <border type="none"/>
-        <children/>
+        <children>
+          <component id="b5137" class="javax.swing.JButton" binding="previousButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-1"/>
+              <icon value="PreviousButtos.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="93eb8" class="javax.swing.JButton" binding="nextButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-1"/>
+              <icon value="NextButton.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="63f22" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Music"/>
+            </properties>
+          </component>
+          <component id="e309e" class="javax.swing.JButton" binding="playButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-1"/>
+              <icon value="PlayButton2.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="b9a4a" class="javax.swing.JComboBox" binding="allSongsComboBox">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <model/>
+            </properties>
+          </component>
+          <component id="709e5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Favorites"/>
+            </properties>
+          </component>
+          <component id="b8ef3" class="javax.swing.JButton" binding="addCurrentSongToButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Add current song to favorites"/>
+            </properties>
+          </component>
+          <component id="7b855" class="javax.swing.JComboBox" binding="favoriteSogsComboBox">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="d0ada" class="javax.swing.JButton" binding="playThisSongButton" default-binding="true">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-1"/>
+              <icon value="playButton.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="cdce4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Play favorite song"/>
+            </properties>
+          </component>
+        </children>
       </grid>
       <component id="d4e1f" class="javax.swing.JButton" binding="offButton">
         <constraints>
@@ -63,7 +156,7 @@
         <properties>
           <background color="-1"/>
           <foreground color="-1"/>
-          <icon value="StopButton.png"/>
+          <icon value="TurnOFFButton.png"/>
           <text value=""/>
         </properties>
       </component>
