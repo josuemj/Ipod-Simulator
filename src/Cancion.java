@@ -1,10 +1,10 @@
-public class Cancion implements ICancion{
-
-    private String _title;
+public class Cancion implements ICancion{private String _title;
     private String _artist;
     private String _album;
     private String _duration;
     private int _id;
+
+
 
 
     public Cancion(String _title, String _artist, String _album, String _duration, int _id) {
