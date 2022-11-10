@@ -1,5 +1,6 @@
 public interface IIpode_simulator {
 
+
     /***
      * Este método enciende / Apaga el dispositivo, recibe una variable booleana
      * que tiene el estado actual del dispositivo
